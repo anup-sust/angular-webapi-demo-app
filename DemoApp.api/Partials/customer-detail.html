@@ -1,0 +1,46 @@
+﻿<div class="panel panel-info col-lg-8">
+    <div class="panel-heading">
+        {{vm.customerDetail.Name||'Name is required'}}
+
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Customer Name:</label>
+
+                <div class="col-sm-9">
+                    <input ng-model="vm.customerDetail.Name" class="form-control"
+                           id="inputEmail1" placeholder="N/A">
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Address:</label>
+
+                <div class="col-sm-9">
+                    <input ng-model="vm.customerDetail.Address"  class="form-control"
+                              id="inputEmail1" placeholder="N/A" />
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Phone:</label>
+
+                <div class="col-sm-9">
+                    <input ng-model="vm.customerDetail.Phone" class="form-control"
+                           id="inputPhone1" placeholder="N/A" />
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+            <button ng-if="vm.$state.current.name!='Customers.new'" ng-click="vm.customerDetail.$PUT(vm.loadCustomerList)" class="btn btn-positive pull-right">
+                Save
+            </button>
+            <button ng-if="vm.$state.current.name=='Customers.new'" ng-click="vm.addNew(vm.customerDetail)" class="btn btn-positive pull-right">
+                Add
+            </button>
+        </form>
+    </div>
+
+</div>
