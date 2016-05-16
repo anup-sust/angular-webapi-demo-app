@@ -12,7 +12,7 @@ namespace DemoApp.api.Controllers
     {
 
        static List<Customer> customers = new List<Customer> {
-                new Customer {Id=0, Name= "Jams", Address="Dhanmondi", Phone="+8801676585956" },
+                new Customer {Id=0, Name= "Jams bond", Address="Dhanmondi", Phone="+8801676585956" },
                 new Customer {Id=1, Name= "Bob Mart", Address="Dhanmondi1", Phone="+8801676585957" },
                 new Customer {Id=2, Name= "Adam", Address="Dhanmondi2", Phone="+8801676585958" }
             };
